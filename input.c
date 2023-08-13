@@ -23,7 +23,7 @@ int getInt() {
         }
     }
 
-    if ((isNum == 0) && (inp != NULL)) {
+    if (!isNum) {
         return (atoi(inp)); 
     }
     else {
@@ -40,7 +40,6 @@ int getInt() {
     //          2 - input too long (still puts the input read into the char array)
 int getLine(char *inp, int size) {
     char c;
-    int of;
     int returnVal = 0;
 
     //If the user doesn't specify a size, the program will free the input string and allocate a char array size 50
